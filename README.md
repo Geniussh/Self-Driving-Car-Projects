@@ -4,7 +4,7 @@ I completed multiple autonomous vehicle (AV) projects using the open source simu
 ## [Racetrack Controller](Racetrack%20Controller)
 Controller to navigate a self-driving car around a racetrack, using CARLA simulation environment.
 
-![racetrack_demo](https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/racetrack.png)
+![racetrack_demo](Demo%20Images/racetrack.png)
 
 ## ES-EKF
 Error-State Extended Kalman Filter to localize a vehicle using data from the CARLA simulator.
