@@ -6,7 +6,7 @@ Controller to navigate a self-driving car around a racetrack, using CARLA simula
 
 ![racetrack_demo](Demo%20Images/racetrack.png)
 
-## ES-EKF
+## [ES-EKF](ES-EKF)
 Error-State Extended Kalman Filter to localize a vehicle using data from the CARLA simulator.
 
 ## Name TBD
