@@ -1,5 +1,5 @@
 # Self-Driving-Cars-Projects
-I completed multiple autonomous vehicle (AV) projects using the open source simulator [CARLA](https://github.com/carla-simulator/carla/). These projects span the domains of AV from control, SLAM, perception to motion planning. 
+I completed multiple autonomous vehicle (AV) projects using the open source simulator [CARLA](https://github.com/carla-simulator/carla/). These projects span the domains of AV from control, state estimation, localization, perception to motion planning. 
 
 ## [Racetrack Controller](Racetrack%20Controller)
 Controller to navigate a self-driving car around a racetrack, using CARLA simulation environment.
