@@ -4,10 +4,12 @@ I completed multiple autonomous vehicle (AV) projects using the open source simu
 ## [Racetrack Controller](Racetrack%20Controller)
 Controller to navigate a self-driving car around a racetrack, using CARLA simulation environment.
 
-![racetrack_demo](Demo%20Images/racetrack.png)
+<img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/racetrack.png" width="400px">
 
-## [ES-EKF](ES-EKF)
+## [ES-EKF Estimator](ES-EKF%20Estimator)
 Error-State Extended Kalman Filter to localize a vehicle using data from the CARLA simulator.
+
+<img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/ESEKF.png" width="400px">
 
 ## Name TBD
 Algorithms to identify bounding boxes for objects in the scene, and to define the boundaries of the drivable surface.
