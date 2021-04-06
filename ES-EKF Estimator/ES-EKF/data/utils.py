@@ -1,7 +1,4 @@
-# Utility classes and functions for Coursera SDC Course 2.
-#
-# Authors: Trevor Ablett and Jonathan Kelly
-# University of Toronto Institute for Aerospace Studies
+# Utility classes and functions for ES-EKF estimator
 
 import numpy as np
 from numpy import sin, cos, arctan2, sqrt

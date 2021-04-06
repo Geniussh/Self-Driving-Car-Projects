@@ -1,7 +1,4 @@
 # Utitlity file with functions for handling rotations.
-#
-# Authors: Trevor Ablett and Jonathan Kelly
-# University of Toronto Institute for Aerospace Studies
 import numpy as np
 
 def angle_normalize(a):
