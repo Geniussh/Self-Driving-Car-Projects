@@ -1,5 +1,9 @@
-# ES-EKF
-I implemented the Error-State Extended Kalman Filter to localize a vehicle using data from the CARLA simulator.
+# Kalman Filter
+## EKF
+There's a jupyter notebook in [EKF](EKF) implementing an Extended Kalman Filter that recursively extimated the position of a vehicle using a veery simple type of LIDAR sensor, which returns range and bearing measurements corresponding to individual landmarks in the environment. I computed and implemented the Jacobians for the measurement models. The mechanism of EKF has been explained in the markdowns. I tuned the range/bearing measurement variances so that the vehicle follows perfectly along the ground truth trajectory.
+
+## ES-EKF
+I implemented the Error-State Extended Kalman Filter to localize a vehicle using data from the CARLA simulator. Explanation of ES-EKF can be found [here](ES-EKF/EKF%20FOR%20VEHICULAR%20STATE.pdf).
 
 Specifically, I accomplished the following:
 - Implemented the filter prediction step using data from IMU sensor
