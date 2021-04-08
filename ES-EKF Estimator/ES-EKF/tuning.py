@@ -17,18 +17,18 @@ gnss = data['gnss']
 lidar = data['lidar']
 
 # Correct calibration rotation matrix, corresponding to Euler RPY angles (0.05, 0.05, 0.1).
-# C_li = np.array([
-#    [ 0.99376, -0.09722,  0.05466],
-#    [ 0.09971,  0.99401, -0.04475],
-#    [-0.04998,  0.04992,  0.9975 ]
-# ])
+C_li = np.array([
+   [ 0.99376, -0.09722,  0.05466],
+   [ 0.09971,  0.99401, -0.04475],
+   [-0.04998,  0.04992,  0.9975 ]
+])
 
 # Incorrect calibration rotation matrix, corresponding to Euler RPY angles (0.05, 0.05, 0.05).
-C_li = np.array([
-     [ 0.9975 , -0.04742,  0.05235],
-     [ 0.04992,  0.99763, -0.04742],
-     [-0.04998,  0.04992,  0.9975 ]
-])
+# C_li = np.array([
+#      [ 0.9975 , -0.04742,  0.05235],
+#      [ 0.04992,  0.99763, -0.04742],
+#      [-0.04998,  0.04992,  0.9975 ]
+# ])
 
 t_i_li = np.array([0.5, 0.1, 0.5])
 
@@ -138,46 +138,54 @@ def calc_error():
 #### Variance Tuning ##########################################################################
 
 ################################################################################################
-# Due to the computation limit of my computer, I tuned two variances per time instead of all of
-# the four variances at the same time. For example, I tuned var_gnss and var_lidar with two for
-# loops nested. Then I tuned var_imu_f and var_imu_w together. Feel free to modify the code to
-# tune more parameters together. Also feel free to change the range of the values to choose from
-# for each variance. Set the first value in the list to be a non-zero value in order to avoid
-# singular matrix when computing Kk in measurement update. 
-# I also created a simple progress bar without using any third-party libraries to track the 
-# progress of for loops. Remember to change toolbar_width if #iterations is no longer 11 * 11. 
+# I tuned the four variances at the same time, which would take a long time if the computation
+# ability is not strong enough.
+# Feel free to change the range of the values to choose from for each variance. 
+# Set the first value in the list to be a non-zero value in order to avoid singular matrix when
+# computing Kk in measurement update. 
 ################################################################################################
 var_gnss_list = np.linspace(0, 10, num=11)
 var_gnss_list[0] = 0.1
-var_lidar_list = np.linspace(0, 200, num=11)
+var_lidar_list = np.linspace(0, 150, num=11)
 var_lidar_list[0] = 1
 
-# var_imu_f_list = np.linspace(0, 0.2, num=11) # to be tuned 
-# var_imu_f_list[0] = 0.01
-# var_imu_w_list = np.linspace(0, 0.4, num=11) # to be tuned
-# var_imu_w_list[0] = 0.01
+var_imu_f_list = np.linspace(0, 0.2, num=11)
+var_imu_f_list[0] = 0.01
+var_imu_w_list = np.linspace(0, 0.4, num=11)
+var_imu_w_list[0] = 0.01
 
-errors = np.zeros((11, 11))
-toolbar_width = 11 * 11
-sys.stdout.write("[%s]" % (("-") * toolbar_width))
-sys.stdout.flush()
+errors = np.zeros((11, 11, 11, 11))
+
+#toolbar_width = 11 * 11 * 11 * 11  # number of iterations
+#sys.stdout.write("[%s]" % (("-") * toolbar_width))
+#sys.stdout.flush()
 
 for i, var_gnss in enumerate(var_gnss_list):
     for j, var_lidar in enumerate(var_lidar_list):
-# for i, var_imu_f in enumerate(var_imu_f_list):
-#     for j, var_imu_w in enumerate(var_imu_w_list):
+        for m, var_imu_f in enumerate(var_imu_f_list):
+            for n, var_imu_w in enumerate(var_imu_w_list):
 
-        main()
-        errors[i][j] = calc_error()
-        best_idxs = np.argwhere(errors == np.min(errors))
+                main()
+                errors[i][j][m][n] = calc_error()
+                best_idxs = np.argwhere(errors == np.min(errors))
+                it = (i+1) * (j+1) * (m+1) * (n+1)
+                if it % 500 == 0:
+                    print("Iteration: ", it, " outta 14641")
         
-        sys.stdout.write("\r") # return to start of line
-        sys.stdout.flush()
-        sys.stdout.write("[") # Overwrite over the existing text from the start 
-        sys.stdout.write("#" * ((i+1)*(j+1))) # number of # denotes the progress completed 
-        sys.stdout.flush()
-sys.stdout.write("]\n")
+                #sys.stdout.write("\r") # return to start of line
+                #sys.stdout.flush()
+                #sys.stdout.write("[") # Overwrite over the existing text from the start 
+                #sys.stdout.write("#" * ((i+1)*(j+1))) # number of # denotes the progress completed 
+                #sys.stdout.flush()
+#sys.stdout.write("]\n")
 best_var_1_idx = best_idxs[0][0]
 best_var_2_idx = best_idxs[0][1]
-print("best var_1, best var_2:", var_gnss_list[best_var_1_idx], var_lidar_list[best_var_2_idx])
-# print("best var_1, best var_2:", var_imu_f_list[best_var_1_idx], var_imu_w_list[best_var_2_idx])
+best_var_3_idx = best_idxs[0][2]
+best_var_4_idx = best_idxs[0][3]
+ret = ''
+ret += '%.3f  ' % (var_gnss_list[best_var_1_idx])
+ret += '%.3f  ' % (var_lidar_list[best_var_2_idx])
+ret += '%.3f  ' % (var_imu_f_list[best_var_3_idx])
+ret += '%.3f  ' % (var_imu_w_list[best_var_4_idx])
+with open('results.txt', 'w') as file:
+    file.write(ret)

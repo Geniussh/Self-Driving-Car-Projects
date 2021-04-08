@@ -101,9 +101,9 @@ lidar.data = (C_li @ lidar.data.T).T + t_i_li
 ################################################################################################
 # Parameters tuned for correct calibration rotation matrix C_li
 var_imu_f = 0.01
-var_imu_w = 0.24
-var_gnss  = 1.5
-var_lidar = 20
+var_imu_w = 0.36
+var_gnss  = 2
+var_lidar = 30
 
 # Parameters tuned for incorrect calibration rotation matrix C_li
 # var_imu_f = 0.08
