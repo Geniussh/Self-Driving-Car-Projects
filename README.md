@@ -11,7 +11,7 @@ Error-State Extended Kalman Filter to localize a vehicle using data from the CAR
 
 <img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/ESEKF.png" width="400px">
 
-## Name TBD
+## [Visual Perception](Visual%20Perception)
 Algorithms to identify bounding boxes for objects in the scene, and to define the boundaries of the drivable surface.
 
 ## Name TBD
