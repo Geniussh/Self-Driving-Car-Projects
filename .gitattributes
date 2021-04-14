@@ -3,3 +3,4 @@
 # I simply exclude this file from counting.
 
 ES-EKF[[:space:]]Estimator/EKF/EKF.ipynb linguist-vendored=true
+Visual[[:space:]]Perception/Visual[[:space:]]Odometry/*.ipynb linguist-vendored=true
