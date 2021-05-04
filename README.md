@@ -12,7 +12,7 @@ Error-State Extended Kalman Filter to localize a vehicle using data from the CAR
 <img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/ESEKF.png" width="400px">
 
 ## [Visual Perception](Visual%20Perception)
-Algorithms to identify bounding boxes for objects in the scene, and to define the boundaries of the drivable surface.
+Algorithms to build vehicle trajectory and algorithms for environment perception stack in AVs. 
 
 ## Name TBD
 A hierarchical motion planner to navigate through a sequence of scenarios in the CARLA simulator, including avoiding a vehicle parked in the lane, following a lead vehicle and safely navigating an intersection.
