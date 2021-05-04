@@ -14,6 +14,11 @@ Error-State Extended Kalman Filter to localize a vehicle using data from the CAR
 ## [Visual Perception](Visual%20Perception)
 Algorithms to build vehicle trajectory and algorithms for environment perception stack in AVs. 
 
+<p float="left">
+  <img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/VP1.png" width="300px">
+  <img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/VP2.png" width="300px">
+</p>
+
 ## Name TBD
 A hierarchical motion planner to navigate through a sequence of scenarios in the CARLA simulator, including avoiding a vehicle parked in the lane, following a lead vehicle and safely navigating an intersection.
 
