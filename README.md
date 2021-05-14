@@ -19,7 +19,7 @@ Algorithms to build vehicle trajectory and algorithms for environment perception
   <img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/VP2.png" width="300px">
 </p>
 
-## [Motion Planner](MotionPlanner)
+## [Motion Planning](MotionPlanner)
 A hierarchical motion planner to navigate through a sequence of scenarios in the CARLA simulator, including avoiding a vehicle parked in the lane, following a lead vehicle and safely navigating an intersection.
 
 
