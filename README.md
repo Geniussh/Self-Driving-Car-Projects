@@ -20,7 +20,7 @@ Algorithms to build vehicle trajectory and algorithms for environment perception
 </p>
 
 ## [Motion Planning](MotionPlanner)
-A hierarchical motion planner to navigate through a sequence of scenarios in the CARLA simulator, including avoiding a vehicle parked in the lane, following a lead vehicle and safely navigating an intersection.
+Projects related to mission/motion planning. To be updated.
 
 
 
