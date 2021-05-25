@@ -19,7 +19,7 @@ Algorithms to build vehicle trajectory and algorithms for environment perception
   <img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/VP2.png" width="300px">
 </p>
 
-## [Motion Planning](MotionPlanner)
+## [Motion Planning](Motion%20Planning)
 Projects related to mission/motion planning. To be updated.
 
 
