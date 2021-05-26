@@ -6,5 +6,3 @@
 # Visual[[:space:]]Perception/Environment[[:space:]]Perception/*.ipynb linguist-vendored=true
 # MotionPlanner/OccupancyGrid/OccupancyGrid.ipynb linguist-vendored=true
 */*/*.ipynb linguist-vendored=true
-CarlaUE4Windows.zip filter=lfs diff=lfs merge=lfs -text
-CarlaUE4Ubuntu.tar.gz filter=lfs diff=lfs merge=lfs -text
