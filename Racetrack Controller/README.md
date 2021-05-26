@@ -11,3 +11,15 @@ I tested the limits of my control design and the testing results are shown as fo
 
 ![Trajectory](Trajectory_Evaluation.png)
 ![Velocity](Velocity_Evaluation.png)
+
+__To Run the Controller in CARLA:__  
+``
+./CarlaUE4.sh /Game/Maps/RaceTrack -windowed -carla-server -benchmark -fps=30
+`` in Ubuntu  
+``
+CarlaUE4.exe /Game/Maps/RaceTrack -windowed -carla-server -benchmark -fps=30
+`` in Windows  
+Then  
+``
+python ./PythonClient/Racetrack\ Controller/module.py
+``
