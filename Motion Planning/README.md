@@ -1,6 +1,8 @@
 # Motion Planner Related Projects
 
 ## Motion Planner
+![](../Demo%20Images/mp-demo.gif)
+
 I implemented a functional motion planning software stack that avoids static and dynamic obstacles, while tracking the center line of a lane as well as handling stop signs. In particular, the stack contains:  
 1. A behavioral planner that handles a stop sign at a T-junction using a state machine
 2. A local planner that generates spiral paths based on the given waypoints using scipy optimizer
@@ -19,6 +21,7 @@ The entire motion planning stack is as follows:
 - Compute the best local path
 - Compute the velocity profile for the path, and compute the waypoints. Use the lead vehicle to inform the velocity profile's dynamic obstacle handling
 - Update the controller
+
 
 ## Occupancy Grid Generator
 I generated an occupancy grid using lidar measurements from a moving vehicle in an unknown environment. I developed the inverse scanner measurement model to map these measurements into occupancy probabilities, and then perform iterative logodds updates to an occupancy grid belief map. 
