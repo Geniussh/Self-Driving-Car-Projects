@@ -95,8 +95,8 @@ class LocalPlanner:
         # and that we are rotating by -ego_state[2] to ensure the ego vehicle's
         # current yaw corresponds to theta = 0 in the new local frame.
         theta = -ego_state[2]
-        goal_x = cos(tehta) * goal_state_local[0] - sin(theta) * goal_state_local[1]
-        goal_y = sin(tehta) * goal_state_local[0] + cos(theta) * goal_state_local[1]
+        goal_x = cos(theta) * goal_state_local[0] - sin(theta) * goal_state_local[1]
+        goal_y = sin(theta) * goal_state_local[0] + cos(theta) * goal_state_local[1]
 
         # Compute the goal yaw in the local frame by subtracting off the 
         # current ego yaw from the heading variable.

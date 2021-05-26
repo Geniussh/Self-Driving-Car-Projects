@@ -142,7 +142,7 @@ class CollisionChecker:
                 # The centerline goal is given by goal_state.
                 # A lower score implies a more suitable path.
                 path = paths[i]
-                score = np.linalg.norm(path[0][-1] - goal_state[0], path[1][-1] - goal_state[1])
+                score = np.linalg.norm([path[0][-1] - goal_state[0], path[1][-1] - goal_state[1]])
 
                 # Compute the "proximity to other colliding paths" score and
                 # add it to the "distance from centerline" score.
@@ -154,7 +154,7 @@ class CollisionChecker:
                     else:
                         if not collision_check_array[j]:
                             path2 = paths[j]
-                            score += self._weight * np.linalg.norm(path[0][-1] - path2[0][-1], path[1][-1] - path2[1][-1])
+                            score += self._weight * np.linalg.norm([path[0][-1] - path2[0][-1], path[1][-1] - path2[1][-1]])
 
             # Handle the case of colliding paths.
             else:
