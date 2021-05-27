@@ -9,7 +9,7 @@ Controller to navigate a self-driving car around a racetrack, using CARLA simula
 ## [ES-EKF Estimator](ES-EKF%20Estimator)
 Error-State Extended Kalman Filter to localize a vehicle using data from the CARLA simulator. Also including implementation for a vanilla Extended Kalman Filter.
 
-<img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/ESEKF.png" width="400px">
+<img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/ESEKF.png" width="550px">
 
 ## [Visual Perception](Visual%20Perception)
 Algorithms to build vehicle trajectory and algorithms for environment perception stack in AVs. Also including implementation for a visual odometry.
