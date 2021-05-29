@@ -1,8 +1,8 @@
 # Racetrack Controller
 
 <p float="left">
-  <img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Racetrack%20Controller/Trajectory_Evaluation.png" width="400px">
-  <img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Racetrack%20Controller/Velocity_Evaluation.png" width="400px">
+  <img src="https://github.com/Geniussh/Self-Driving-Car-Projects/blob/main/Racetrack%20Controller/Trajectory_Evaluation.png" width="400px">
+  <img src="https://github.com/Geniussh/Self-Driving-Car-Projects/blob/main/Racetrack%20Controller/Velocity_Evaluation.png" width="400px">
 </p>
 
 I developed a controller to navigate a self-driving car around a racetrack in the CARLA simulation environment. 
