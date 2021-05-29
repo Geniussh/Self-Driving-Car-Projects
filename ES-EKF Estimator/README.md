@@ -17,4 +17,4 @@ Specifically, I accomplished the following:
 <img src="https://github.com/Geniussh/Self-Driving-Car-Projects/blob/main/Demo%20Images/ES-EKF1.png" width="400px"><img src="https://github.com/Geniussh/Self-Driving-Car-Projects/blob/main/Demo%20Images/ES-EKF2.png" width="365px">
 
 ### Sample outputs under sensor dropout
-<img src="https://github.com/Geniussh/Self-Driving-Cars-Projects/blob/main/Demo%20Images/ES-EKF3.png" height="300px"><img src="https://github.com/Geniussh/Self-Driving-Car-Projects/blob/main/Demo%20Images/ES-EKF4.png" height="300px">
+<img src="https://github.com/Geniussh/Self-Driving-Car-Projects/blob/main/Demo%20Images/ES-EKF3.png" height="300px"><img src="https://github.com/Geniussh/Self-Driving-Car-Projects/blob/main/Demo%20Images/ES-EKF4.png" height="300px">
