@@ -11,6 +11,7 @@ In particular, I did
 
 See the [Jupyter Notebook](Visual%20Odometry/Visual%20Odometry%20for%20Localization%20in%20Autonomous%20Driving.ipynb) for much more details.
 
+- - - -
 ## Environment Perception for Autonomous Driving
 Given the output from 
 - semantic segmentation neural networks
