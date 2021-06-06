@@ -23,7 +23,7 @@ Algorithms to build vehicle trajectory and algorithms for environment perception
 A functional motion planning stack that can avoid both static and dynamic obstacles while tracking the center line of a lane as well as handling stop signs, in CARLA. Also including implementations for a mission planner and occupancy grid in Jupyter Notebooks. 
 
 <img src="https://github.com/Geniussh/Self-Driving-Car-Projects/blob/main/Demo%20Images/MotionPlanner.png" width="900px">
-
+- - - -
 # Install CARLA
 ### Ubuntu
 Download [CarlaUE4 for Ubuntu](https://drive.google.com/file/d/1F35snQj1NTo4u0EaUFL2nE8C67Vg8UCs/view?usp=sharing) and follow the [instructions](Demo%20Images/CARLA-Setup-Guide-_Ubuntu.pdf).
